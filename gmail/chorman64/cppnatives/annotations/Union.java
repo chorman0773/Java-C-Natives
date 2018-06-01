@@ -1,5 +1,5 @@
 package gmail.chorman64.cppnatives.annotations;
 
 public @interface Union{
-  Struct.Field[] fields();
+  Field[] fields();
 }
