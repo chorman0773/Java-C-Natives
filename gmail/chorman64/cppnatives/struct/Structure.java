@@ -1,6 +1,6 @@
 package gmail.chorman64.cppnatives.struct;
 
-import gmail.chorman64.cppnatives.annotation;
+import gmail.chorman64.cppnatives.annotation.Struct;
 
 public class Structure<T extends Structure<T>>{
   private long address;
@@ -11,8 +11,9 @@ public class Structure<T extends Structure<T>>{
     this.structClass = structClass;
   }
   
-  public <S> LValueExpression<S> getStructField(String name){
-   
+  protected <S> LValueExpression<S> getStructField(String name){
+    Struct s = structClass.getDeclaredAnnotation(Struct.class);
+    
   }
 
 };
